@@ -1,0 +1,17 @@
+.idea
+.DS_Store
+
+# npm
+npm-debug.log
+node_modules
+yarn.lock
+package-lock.json
+
+# project-specific
+tmp
+test/browser/less.js
+test/sourcemaps/**/*.map
+test/sourcemaps/*.map
+test/sourcemaps/*.css
+test/less-bom
+.next
