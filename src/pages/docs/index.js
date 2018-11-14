@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
-import { Row, Col } from 'antd';
+import { Row, Col, Menu } from 'antd';
 import AA from 'antd-tablex/README.md';
 import { Layout, Doc } from '../../components';
 import './docs.less';
+
+const {
+  SubMenu: MenuSub,
+  Item: MenuItem
+} = Menu;
 
 const DocsPage = ({ router }) => {
   const { asPath } = router;
@@ -16,8 +21,23 @@ const DocsPage = ({ router }) => {
   return (
     <Layout router={router} lang={lang}>
       <Row className="docs-page-el">
-        <Col span={4}>dd</Col>
-        <Col span={20}>
+        <Col span={4}>
+          <Menu mode="inline">
+            <MenuSub title="123">
+              <MenuItem>ddd</MenuItem>
+            </MenuSub>
+            <MenuSub title="123">
+              <MenuItem>ddd</MenuItem>
+            </MenuSub>
+            <MenuSub title="123">
+              <MenuItem>ddd</MenuItem>
+            </MenuSub>
+            <MenuSub title="123">
+              <MenuItem>ddd</MenuItem>
+            </MenuSub>
+          </Menu>
+        </Col>
+        <Col span={19}>
           <Doc html={AA} />
         </Col>
       </Row>
