@@ -1,0 +1,9 @@
+{
+  "name": "antd-table-www",
+  "script": "./server.js",
+  "cwd": "./",
+  "instances": 3,
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

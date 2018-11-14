@@ -1,0 +1,39 @@
+{
+  "name": "antd-tablex-www",
+  "version": "0.9.0",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "pm2": "cross-env NODE_ENV=production pm2 start pm2.json"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^3.10.4",
+    "antd-tablex": "^0.8.8",
+    "axios": "^0.18.0",
+    "less": "3.8.1",
+    "moment": "^2.22.2",
+    "next": "^7.0.2",
+    "next-routes": "^1.4.2",
+    "prop-types": "^15.6.2",
+    "qs": "^6.5.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-import": "^1.11.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}
