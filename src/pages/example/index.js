@@ -6,7 +6,7 @@ import { withRouter } from 'next/router';
 import { Card } from 'antd';
 import Tablex from 'antd-tablex';
 import fetch from '../../fetch';
-import Layout from '../../components/Layout';
+import { Layout } from '../../components';
 import searchOptions from './configs';
 
 class ExampleList extends Component {
