@@ -68,7 +68,6 @@ class ExampleList extends Component {
   constructor(props) {
     super(props);
     this.onChangeTable = this.onChangeTable.bind(this);
-    this.onChangeOptions = this.onChangeOptions.bind(this);
   }
 
   componentWillMount() {
@@ -101,8 +100,6 @@ class ExampleList extends Component {
         this.setState({ loading: false });
       });
   }
-
-  onChangeOptions() {}
 
   render() {
     const { router } = this.props;

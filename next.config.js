@@ -28,6 +28,10 @@ const nextConfig = withCss(withLess({
       };
       config.module.rules.unshift(eslintRule);
     }
+    config.module.rules.push({
+      test: /\.md$/,
+      loader: 'html-loader!markdown-loader'
+    });
     return config;
   }
 }));

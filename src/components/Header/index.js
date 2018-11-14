@@ -21,20 +21,35 @@ export default class Header extends Component {
   }
 
   changeLang() {
-    const { lang } = this.props;
+    const { router, lang } = this.props;
+    const { asPath } = router;
     switch (lang) {
       case 'enUS':
-        return Router.push('/zhCN');
-      case 'zhCN':
-        return Router.push('/');
+        switch (asPath) {
+          case '/':
+            return Router.push(`${asPath}zhCN`);
+          default:
+            return Router.push(`${asPath}/zhCN`);
+        }
       default:
-        return Router.push('/');
+        switch (asPath) {
+          case '/zhCN':
+            return Router.push(asPath.replace('/zhCN', '/'));
+          default:
+            return Router.push(asPath.replace('/zhCN', ''));
+        }
     }
   }
 
   goToNext(item) {
+    const { lang } = this.props;
     const { key } = item;
-    Router.push(key);
+    switch (lang) {
+      case 'enUS':
+        return Router.push(key);
+      default:
+        return Router.push(`${key}/zhCN`);
+    }
   }
 
   render() {
@@ -67,10 +82,10 @@ export default class Header extends Component {
               { lang === 'enUS' ? 'Trial now' : '立刻试用' }
             </MenuItem>
             <MenuItem
-              key="/document"
+              key="/docs"
               className="header-el-menu-item"
             >
-              { lang === 'enUS' ? 'Document' : '文档' }
+              { lang === 'enUS' ? 'Document' : '使用文档' }
             </MenuItem>
           </Menu>
         </Col>
@@ -79,7 +94,7 @@ export default class Header extends Component {
             size="small"
             onClick={this.changeLang}
           >
-            { lang === 'enUS' ? 'English' : '简体中文' }
+            { lang === 'enUS' ? '简体中文' : 'English' }
           </Button>
         </Col>
         <Col span={2} className="header-el-col-right">
