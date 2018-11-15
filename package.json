@@ -11,7 +11,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.10.4",
-    "antd-tablex": "^0.8.9",
+    "antd-tablex": "^0.8.11",
     "axios": "^0.18.0",
     "less": "3.8.1",
     "moment": "^2.22.2",

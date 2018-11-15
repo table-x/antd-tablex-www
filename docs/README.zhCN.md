@@ -5,41 +5,42 @@
 [![NpmLicense](https://img.shields.io/npm/l/antd-tablex.svg)](https://github.com/mzonghao/antd-tablex-api/blob/master/LICENSE)
 
 #### [English](./README.md) | [简体中文](./docs/README.zhCN.md)
-#### frontend example of antd-tablex, [nextjs](https://github.com/zeit/next.js)-based
+#### antd-tablex 的前端案例，基于 [nextjs](https://github.com/zeit/next.js)
 
 </div>
 
 ## Contents
-- [port](#port)
-- [develop start](#develop-start)
-- [deploy start](#deploy-start)
-- [deploy publish](#deploy-publish)
+- [默认端口](#默认端口)
+- [开发启动](#开发启动)
+- [生产启动](#生产启动)
+- [发布](#发布)
 
 ***
 
 ## Quick start
 
-### port
+### 默认端口
 ```
 17100
 ```
 
-### develop-start
+### 开发启动
 ```
 npm run dev
 ```
 
-### deploy-start
+### 生产启动
 ```
 npm run build
 npm start
 ```
 
-### deploy-publish
+### 发布
+初次发布
 ```
 make publish 
 ```
-or
+
 ```
 make re-publish
 ```
