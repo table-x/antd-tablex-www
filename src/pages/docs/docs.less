@@ -1,3 +1,98 @@
 .docs-page-el {
   padding: 40px 50px 0;
+  .docs-page-el-col {
+    padding: 50px 40px;
+  }
+}
+.docs-mark-down {
+  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  #english- {
+    display: none;
+  }
+  hr {
+    display: none;
+  }
+  h2, h3, h4, h5, h6 {
+    color: #0d1a26;
+    font-family: Avenir,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-variant: tabular-nums;
+    margin: 1.6em 0 .6em;
+    font-weight: 500;
+    clear: both;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    margin: 1em 0;
+  }
+  pre {
+    color: #000;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    background: #f2f4f5;
+    padding: 12px 20px;
+    margin: 16px 0;
+    overflow: auto;
+  }
+  code[class*=language-] {
+    color: #000;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+  }
+  code {
+    border: none;
+    background: #f2f4f5;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #314659;
+    overflow: auto;
+  }
+  table {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    border-width: 0;
+    margin: 2em 0;
+    th {
+      border: 1px solid #ebedf0;
+      border-width: 0 0 2px;
+      padding: 14px 16px;
+      border-color: #e8e8e8;
+      text-align: left;
+      white-space: nowrap;
+      color: #5c6b77;
+      font-weight: 500;
+      background: rgba(0,0,0,.02);
+    }
+    td {
+      border: 1px solid #ebedf0;
+      padding: 14px 16px;
+      border-width: 1px 0;
+      text-align: left;
+      &:nth-child(3) {
+        width: 22%;
+        font-size: 13px;
+        color: #c41d7f;
+        word-break: break-all;
+      }
+    }
+  }
+
 }
