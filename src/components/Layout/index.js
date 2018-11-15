@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import { Layout as AntdLayout } from 'antd';
 import Header from '../Header';
 
@@ -8,7 +9,7 @@ const {
   Content: AntdContent
 } = AntdLayout;
 
-const Layout = ({ children, router, lang }) => {
+const Layout = ({ children, router, lang, title }) => {
 
   const headerStyles = {
     background: '#FFF',
@@ -18,6 +19,9 @@ const Layout = ({ children, router, lang }) => {
 
   return (
     <AntdLayout>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <AntdHeader style={headerStyles}>
         <Header router={router} lang={lang} />
       </AntdHeader>
@@ -31,7 +35,12 @@ const Layout = ({ children, router, lang }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   router: PropTypes.object.isRequired,
-  lang: PropTypes.string.isRequired
+  lang: PropTypes.string.isRequired,
+  title: PropTypes.string
+};
+
+Layout.defaultProps = {
+  title: 'TableX'
 };
 
 export default Layout;
