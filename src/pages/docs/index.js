@@ -31,7 +31,7 @@ const DocsPage = ({ router }) => {
             defaultSelectedKeys={['1']}
           >
             <MenuSub title="API" key="sub1">
-              <MenuItem key="1">All API</MenuItem>
+              <MenuItem key="1">All props</MenuItem>
             </MenuSub>
           </Menu>
         </Col>
