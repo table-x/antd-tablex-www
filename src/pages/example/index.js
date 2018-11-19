@@ -26,6 +26,7 @@ class ExampleList extends Component {
   state = {
     users: [],
     loading: false,
+    errorMessage: '',
     paginationTotal: undefined
   };
 
@@ -94,16 +95,17 @@ class ExampleList extends Component {
     })
       .then((res) => {
         const { data, total } = res.result;
-        this.setState({ users: data, paginationTotal: total, loading: false });
+        this.setState({ users: data, paginationTotal: total, loading: false, errorMessage: '' });
       })
-      .catch(() => {
-        this.setState({ loading: false });
+      .catch((e) => {
+        const errorMessage = JSON.stringify(e);
+        this.setState({ loading: false, errorMessage });
       });
   }
 
   render() {
     const { router } = this.props;
-    const { users, loading, paginationTotal, searchOptions } = this.state;
+    const { users, loading, paginationTotal, searchOptions, errorMessage } = this.state;
     const { asPath } = router;
     let lang = 'enUS';
     if (asPath.includes('zhCN')) {
@@ -119,7 +121,8 @@ class ExampleList extends Component {
       searchOptions,
       loading,
       onChange: this.onChangeTable,
-      locale: lang
+      locale: lang,
+      errorMessage
     };
 
     return (
